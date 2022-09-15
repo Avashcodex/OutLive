@@ -13,6 +13,7 @@ public class PlayerMove : MonoBehaviour
     float horiMove = 0f;
     private bool jumpPossible = false;
     private bool flightDuration = true;
+    private bool firstJump = false;
 
     
     void Start()
@@ -23,6 +24,8 @@ public class PlayerMove : MonoBehaviour
    
     void Update()
     {
+        Debug.Log(Physics.gravity);
+
         horiMove = Input.GetAxisRaw("Horizontal") * speed;
         //Debug.Log(flightDuration);
         gameObject.GetComponent<Transform>().position += new Vector3(horiMove, 0f, speedFrd) * Time.deltaTime;
@@ -55,6 +58,7 @@ public class PlayerMove : MonoBehaviour
     IEnumerator FlightDelay()
     {
         flightDuration = false;
+        //firstJump = true;
         yield return new WaitForSeconds(0.85f);
         flightDuration = true;
     }
