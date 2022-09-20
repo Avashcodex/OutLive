@@ -32,7 +32,7 @@ public class LionMovement : MonoBehaviour
             LionJump();
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && sprint)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && sprint && jumpPossible)
         {
             StartCoroutine(SpeedIncrease());
         }
