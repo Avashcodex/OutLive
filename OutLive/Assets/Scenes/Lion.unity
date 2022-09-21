@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &34856928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,6 +726,9 @@ MonoBehaviour:
   speedFrd: 6
   speedJump: 10
   speedIncFactor: 15
+  player: {fileID: 1264858274}
+  rotationFactor: 26.95
+  rotationSmooth: 6.58
 --- !u!4 &297092352261125387
 Transform:
   m_ObjectHideFlags: 0
