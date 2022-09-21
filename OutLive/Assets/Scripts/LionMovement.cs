@@ -44,7 +44,7 @@ public class LionMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        Debug.Log(Physics.gravity);
+      
 
         
 
