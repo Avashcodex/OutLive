@@ -19,6 +19,7 @@ public class LionMovement : MonoBehaviour
     public GameObject player;
     public float rotationFactor;
     public float rotationSmooth;
+    public string anim;
 
 
 
@@ -32,8 +33,11 @@ public class LionMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && jumpPossible)
         {
+
             jumpPossible = false;
+            GetComponent<Animation>().Play(anim);
             LionJump();
+
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && sprint && jumpPossible)
